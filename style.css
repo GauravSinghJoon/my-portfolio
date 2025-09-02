@@ -33,6 +33,7 @@ body {
   box-sizing: border-box;
 }
 .logo-initials {
+  font-family: 'auto';
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -66,10 +67,10 @@ body {
 /* Hero Section */
 .hero {
   background: transparent;
-  min-height: 74vh;
+  min-height: 80vh; /* Adjusted for better content visibility */
   display: flex;
   align-items: center;
-  padding: 100px 5vw 64px;
+  padding: 80px 5vw 64px; /* Adjusted padding */
   border-radius: 20px;
   margin: 80px auto 40px;
   max-width: 98vw;
@@ -94,12 +95,10 @@ body {
 
 .hero-content h1 {
   margin: 0;
-  white-space: nowrap;
 }
 
 .hero-content h2 {
   margin: 0;
-  white-space: nowrap; /* Added this line to prevent text wrapping */
 }
 
 .highlight {
@@ -112,8 +111,8 @@ body {
 
 .muted {
   color: #f27825;
-  font-family: 'Poppins', sans-serif;
-  opacity: 0.7;
+  font-family: "Bebas Neue", sans-serif;
+  opacity: 0.5;
   font-weight: 600;
   font-size: 2.5em;
 }
@@ -132,11 +131,11 @@ body {
 }
 
 .accent {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: #f27825;
   font-size: 2.2rem;
   font-weight: 600;
-  opacity: 0.7;
+  opacity: 0.5;
   text-align: left;
 }
 
@@ -149,7 +148,7 @@ body {
 }
 .hero-buttons {
   letter-spacing: 0.2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -340,14 +339,10 @@ body {
   }
   .hero-content h1 {
     font-size: 2.2rem;
-    white-space: nowrap;
   }
-
   .hero-content h2 {
     font-size: 1.6rem;
-    white-space: nowrap;
   }
-
   .hero-desc {
     font-size: 0.9rem;
   }
@@ -363,22 +358,20 @@ body {
   }
   .hero-buttons {
     gap: 12px;
-    flex-direction: column; /* This will stack buttons vertically on small screens */
+    flex-direction: column;
   }
   .navbar {
-    flex-direction: row; /* Aligns logo and links horizontally */
-    justify-content: space-between; /* Spreads them out */
+    flex-direction: row; /* Fixed: Aligns items horizontally */
+    justify-content: space-between; /* Fixed: Spaces logo and links out */
     align-items: center;
-    height: 50px; /* Reduced height for a more compact look */
-    padding: 0 15px; /* Adjusts padding on the sides */
+    height: 50px;
+    padding: 0 15px;
   }
-
   .nav-links {
-    flex-direction: row; /* Aligns links horizontally */
-    gap: 15px; /* Reduced gap between links */
+    flex-direction: row; /* Fixed: Aligns links horizontally */
+    gap: 15px;
   }
-
   .logo-initials {
-    font-size: 1.5rem; /* Reduced logo size */
+    font-size: 1.5rem;
   }
 }
