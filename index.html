@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gaurav Singh Joon | Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <video autoplay muted loop id="background-video">
+      <source src="videos/background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo"><span class="logo-initials">GSJ</span></div>
+        <div class="nav-links">
+          <a href="#home">HOME</a>
+          <a href="#work">PROJECTS</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONNECT</a>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero dark-theme">
+      <div class="hero-content">
+        <div>
+          <h1>
+            <span class="highlight">Gaurav</span>
+            <span class="muted">Singh Joon</span>
+          </h1>
+          <h2 class="heading">
+            <span class="main-heading">WEB</span>
+            <span class="accent">Developer</span>
+          </h2>
+          <p class="hero-desc">
+            Skilled Front-End Developer specializing in React.js, JavaScript,
+            HTML5, and CSS. Experienced in building responsive, engaging, and
+            user-friendly web applications with knowledge of Python, Django, and
+            backend frameworks.
+            <br />
+            Certified in Data Science, AI, and Cybersecurity.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn primary-btn">HIRE ME</a>
+            <a
+              href="documents/TECH GSJ RES.pdf"
+              download
+              class="btn outline-btn"
+              >DOWNLOAD RESUME</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="projects light-theme">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="images/weather-app.png" alt="Weather Application" />
+            <div>
+              <h3>Weather Application</h3>
+              <p>
+                JavaScript, OpenWeatherMap API<br />
+                Dynamic Attractive UI showing real-time weather conditions by
+                location.
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="images/pathwise.png" alt="PathWise Career Finder" />
+            <div>
+              <h3>PathWise: AI Career Path Finder</h3>
+              <p>
+                Python, Flask, Word2Vec, Pandas, HTML<br />
+                Interactive career guidance tool using NLP and AI similarity
+                scoring.
+              </p>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="images/hotel-mgmt.png" alt="Hotel Management System" />
+            <div>
+              <h3>Hotel Management System</h3>
+              <p>
+                Python, Tkinter<br />GUI for room booking, payments, and staff
+                management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about dark-theme">
+      <div class="about-inner">
+        <div class="about-info">
+          <h2>About Me</h2>
+          <p>
+            <b>Hello!</b> I'm Gaurav Singh Joon,<br />
+            A Web Developer and Digital Marketer based in New Delhi, India. I am
+            a skilled Front-End Developer specializing in React.js, JavaScript,
+            HTML5, and CSS, with back-end knowledge in Python, Django, and SQL.
+            My professional goal is to create responsive, engaging, and
+            user-friendly web applications that provide seamless user
+            experiences. I am adept at building and optimizing websites and I
+            have experience with a variety of projects, from developing an AI
+            career path finder using Python and Flask to creating a dynamic
+            weather app with JavaScript. I also bring hands-on experience in
+            managing social media campaigns and optimizing content for SEO. In
+            addition to my web development skills, I am certified in Data
+            Science, AI, and Cybersecurity, which allows me to build data-driven
+            solutions and understand modern security practices. I am passionate
+            about leveraging my diverse skill set to create effective digital
+            experiences that connect users with brands.
+          </p>
+          <ul>
+            <li><strong>Languages:</strong> English, Hindi, French</li>
+            <li>
+              <strong>Contact:</strong>
+              <a href="mailto:gauravsinghjoon@gmail.com"
+                >gauravsinghjoon@gmail.com</a
+              >
+            </li>
+            <li>
+              <strong>Socials:</strong>
+              <a
+                href="https://www.linkedin.com/in/gauravsinghjoon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="about-achievements">
+          <h3>Certifications</h3>
+          <ul>
+            <li>Python & Django: Training course completed with NITD.</li>
+            <li>
+              Data Science, AI & Cybersecurity: Masterclass from ISTEP and
+              Deakin University.
+            </li>
+            <li>
+              Advanced Excel & Digital Marketing: Diplomas earned from Kamal
+              Institute of Higher Education and Advanced Technology (KIHEAT).
+            </li>
+            <li>
+              WordPress: A project-based certification for building a website
+              with WordPress.
+            </li>
+            <li>
+              Data Visualization with Power BI: Course in data visualization
+              using Power BI.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact light-theme">
+      <h2>Let's Connect</h2>
+      <form class="contact-form" action="https://formspree.io/f/manddbaa" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn primary-btn">Send Message</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <span>&copy; 2025 Gaurav Singh Joon</span>
+        <span>
+          <a href="https://linkedin.com/in/your-profile" title="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="mailto:gauravsinghjoon@gmail.com" title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
