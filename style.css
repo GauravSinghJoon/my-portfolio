@@ -199,7 +199,7 @@ body {
 }
 
 .outline-btn:hover {
-  background: #f277825;
+  background: #f27825;
   color: #fff;
 }
 
@@ -391,7 +391,11 @@ body {
   
   .nav-links {
     flex-direction: row;
-    gap: 1.1rem; /* Reduced gap to fit the Connect button */
+    gap: 0.8rem; /* Reduced gap for smaller screens */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Smaller font size for links */
   }
   
   .hero-buttons {
