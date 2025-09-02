@@ -96,6 +96,8 @@ body {
 
 .hero-content h1 {
   margin: 0;
+  font-size: 2.2rem;
+  white-space: nowrap;
 }
 
 .hero-content h2 {
@@ -364,11 +366,22 @@ body {
     flex-direction: column; /* This will stack buttons vertically on small screens */
 }
 .navbar {
-  justify-content: center;
-  gap: 20px;
-}
-.nav-links {
-  gap: 1.5rem;
+    height: 40px; /* Reduces the height of the entire navbar */
+    padding: 0 10px; /* Reduces padding on the sides */
+  }
+
+  .logo-initials {
+    font-size: 1.5rem; /* Makes the logo smaller */
+  }
+
+  .nav-links {
+    gap: 0.8rem; /* Reduces the space between the navigation links */
+  }
+
+  /* Adjust the font sizes for the text in the hero section to prevent clutter */
+  .hero-content h1 {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
 }
 
-}
