@@ -368,26 +368,14 @@ body {
 }
 
 /* Responsive Styles */
-@media (max-width: 900px) {
-  .projects-grid {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .about-inner {
-    flex-direction: column;
-    gap: 26px;
-  }
-}
-
 @media (max-width: 600px) {
-  /* Hide the old navbar and show the new mobile one */
-  .navbar {
+  /* Hide the PC navbar and show the new mobile one */
+  .navbar-pc {
     display: none;
   }
   
   .navbar-mobile {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 50px;
@@ -403,13 +391,26 @@ body {
   
   .nav-links {
     flex-direction: row;
-    gap: 1.3rem;
-    width: auto;
-    margin-top: 0;
+    gap: 15px;
+  }
+  
+  .hero-buttons {
+    gap: 12px;
+    flex-direction: column;
   }
   
   .logo-initials {
-    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+  
+  .contact-form {
+    padding: 0 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   /* Other mobile styles */
@@ -433,9 +434,10 @@ body {
     gap: 10px;
     align-items: flex-start;
   }
-  
-  .hero-buttons {
-    gap: 12px;
-    flex-direction: column;
+}
+
+@media (min-width: 601px) {
+  .navbar-mobile {
+    display: none;
   }
 }
