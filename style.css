@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap');
-
 #background-video {
   position: fixed;
   top: 0;
@@ -96,12 +94,12 @@ body {
 
 .hero-content h1 {
   margin: 0;
-  font-size: 2.2rem;
   white-space: nowrap;
 }
 
 .hero-content h2 {
   margin: 0;
+  white-space: nowrap; /* Added this line to prevent text wrapping */
 }
 
 .highlight {
@@ -342,15 +340,17 @@ body {
   }
   .hero-content h1 {
     font-size: 2.2rem;
-}
+    white-space: nowrap;
+  }
 
-.hero-content h2 {
+  .hero-content h2 {
     font-size: 1.6rem;
-}
+    white-space: nowrap;
+  }
 
-.hero-desc {
+  .hero-desc {
     font-size: 0.9rem;
-}
+  }
   .hero-content {
     flex-direction: column;
     align-items: flex-start;
@@ -364,24 +364,21 @@ body {
   .hero-buttons {
     gap: 12px;
     flex-direction: column; /* This will stack buttons vertically on small screens */
-}
-.navbar {
-    height: 40px; /* Reduces the height of the entire navbar */
-    padding: 0 10px; /* Reduces padding on the sides */
   }
-
-  .logo-initials {
-    font-size: 1.5rem; /* Makes the logo smaller */
+  .navbar {
+    flex-direction: row; /* Aligns logo and links horizontally */
+    justify-content: space-between; /* Spreads them out */
+    align-items: center;
+    height: 50px; /* Reduced height for a more compact look */
+    padding: 0 15px; /* Adjusts padding on the sides */
   }
 
   .nav-links {
-    gap: 0.8rem; /* Reduces the space between the navigation links */
+    flex-direction: row; /* Aligns links horizontally */
+    gap: 15px; /* Reduced gap between links */
   }
 
-  /* Adjust the font sizes for the text in the hero section to prevent clutter */
-  .hero-content h1 {
-    font-size: 2rem;
-    white-space: nowrap;
+  .logo-initials {
+    font-size: 1.5rem; /* Reduced logo size */
   }
 }
-
