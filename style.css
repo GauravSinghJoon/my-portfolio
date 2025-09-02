@@ -42,7 +42,7 @@ body {
 .nav-links {
   display: flex;
   gap: 2rem;
-  margin-left: auto; /* Aligns the nav-links to the right */
+  margin-left: auto; /* This line pushes the links to the right */
 }
 .nav-links a {
   color: #fff;
@@ -375,5 +375,6 @@ body {
     max-width: 95%; /* Limits the width of the input fields */
   }
 }
+
 
 
