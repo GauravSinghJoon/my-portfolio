@@ -13,6 +13,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <video autoplay muted loop playsinline id="background-video">
@@ -21,7 +27,17 @@
     </video>
 
     <header>
-      <nav class="navbar">
+      <nav class="navbar-pc">
+        <div class="logo"><span class="logo-initials">GSJ</span></div>
+        <div class="nav-links">
+          <a href="#home">HOME</a>
+          <a href="#work">PROJECTS</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONNECT</a>
+        </div>
+      </nav>
+
+      <nav class="navbar-mobile">
         <div class="logo"><span class="logo-initials">GSJ</span></div>
         <div class="nav-links">
           <a href="#home">HOME</a>
@@ -172,10 +188,19 @@
 
     <section id="contact" class="contact light-theme">
       <h2>Let's Connect</h2>
-      <form class="contact-form" action="https://formspree.io/f/manddbaa" method="POST">
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/manddbaa"
+        method="POST"
+      >
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
         <button type="submit" class="btn primary-btn">Send Message</button>
       </form>
     </section>
@@ -184,7 +209,11 @@
       <div class="footer-content">
         <span>&copy; 2025 Gaurav Singh Joon</span>
         <span>
-          <a href="https://linkedin.com/in/your-profile" title="LinkedIn"
+          <a
+            href="https://linkedin.com/in/gauravsinghjoon/"
+            title="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="fab fa-linkedin"></i
           ></a>
           <a href="mailto:gauravsinghjoon@gmail.com" title="Email"
@@ -196,7 +225,4 @@
 
     <script src="script.js"></script>
   </body>
-
 </html>
-
-
