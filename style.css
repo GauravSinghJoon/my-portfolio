@@ -20,7 +20,7 @@ body {
 /* Navigation */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps logo on left and links on right */
   align-items: center;
   height: 60px;
   padding: 0 40px;
@@ -42,6 +42,7 @@ body {
 .nav-links {
   display: flex;
   gap: 2rem;
+  margin-left: auto; /* Aligns the nav-links to the right */
 }
 .nav-links a {
   color: #fff;
@@ -67,12 +68,12 @@ body {
 /* Hero Section */
 .hero {
   background: transparent;
-  min-height: 80vh; /* Adjusted for better content visibility */
+  min-height: 74vh; /* Adjusted for better content visibility */
   display: flex;
   align-items: center;
   padding: 80px 5vw 64px; /* Adjusted padding */
   border-radius: 20px;
-  margin: 80px auto 40px;
+  margin: 40px auto 40px;
   max-width: 98vw;
   position: relative;
   z-index: 2;
@@ -374,4 +375,5 @@ body {
     max-width: 95%; /* Limits the width of the input fields */
   }
 }
+
 
