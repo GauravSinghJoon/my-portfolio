@@ -20,7 +20,7 @@ body {
 /* Navigation */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Keeps logo on left and links on right */
+  justify-content: space-between;
   align-items: center;
   height: 60px;
   padding: 0 40px;
@@ -32,6 +32,7 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
 }
+
 .logo-initials {
   font-family: 'auto';
   font-size: 2rem;
@@ -39,11 +40,12 @@ body {
   letter-spacing: 2px;
   color: #fff;
 }
+
 .nav-links {
   display: flex;
   gap: 2rem;
-  margin-left: auto; /* This line pushes the links to the right */
 }
+
 .nav-links a {
   color: #fff;
   text-decoration: none;
@@ -52,6 +54,7 @@ body {
   padding: 0 0.2em;
   font-size: 1.05rem;
 }
+
 .nav-links a:after {
   content: '';
   display: block;
@@ -63,15 +66,18 @@ body {
   left: 0;
   bottom: -4px;
 }
-.nav-links a:hover:after { width: 100%; }
+
+.nav-links a:hover:after {
+  width: 100%;
+}
 
 /* Hero Section */
 .hero {
   background: transparent;
-  min-height: 74vh; /* Adjusted for better content visibility */
+  min-height: 74vh;
   display: flex;
   align-items: center;
-  padding: 80px 5vw 64px; /* Adjusted padding */
+  padding: 80px 5vw 64px;
   border-radius: 20px;
   margin: 40px auto 40px;
   max-width: 98vw;
@@ -147,6 +153,7 @@ body {
   color: #bbb;
   text-align: left;
 }
+
 .hero-buttons {
   letter-spacing: 0.2rem;
   font-family: "Bebas Neue", sans-serif;
@@ -155,6 +162,7 @@ body {
   justify-content: center;
   width: 100%;
 }
+
 .btn {
   padding: 10px 22px;
   font-weight: 600;
@@ -166,21 +174,25 @@ body {
   text-align: center;
   text-decoration: none;
 }
+
 .primary-btn {
   background: #f27825;
   color: #fff;
   display: inline-block;
 }
+
 .primary-btn:hover {
   background: #fff;
   color: #f27825;
 }
+
 .outline-btn {
   background: transparent;
   color: #f27825;
   border: 2px solid #f27825;
   display: inline-block;
 }
+
 .outline-btn:hover {
   background: #f27825;
   color: #fff;
@@ -198,13 +210,20 @@ body {
   position: relative;
   z-index: 2;
 }
-.projects h2 { font-size: 2.2rem; margin-bottom: 34px; text-align: center; }
+
+.projects h2 {
+  font-size: 2.2rem;
+  margin-bottom: 34px;
+  text-align: center;
+}
+
 .projects-grid {
   display: flex;
   gap: 2.5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .project-card {
   background: #faf7f2;
   padding: 20px 16px;
@@ -215,8 +234,16 @@ body {
   transition: transform 0.17s;
   text-align: center;
 }
-.project-card:hover { transform: translateY(-5px) scale(1.025); }
-.project-card img { width: 100%; border-radius: 8px; margin-bottom: 14px; }
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.025);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
 
 /* About Section */
 .about {
@@ -229,16 +256,19 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .about-inner {
   display: flex;
   gap: 50px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .about-info {
   flex: 2;
   min-width: 280px;
 }
+
 .about-achievements {
   flex: 1.2;
   background: rgba(35, 41, 47, 0.9);
@@ -246,14 +276,19 @@ body {
   border-radius: 12px;
   min-width: 280px;
 }
-.about-info h2, .about-achievements h3 {
+
+.about-info h2,
+.about-achievements h3 {
   color: #f27825;
   margin-bottom: 12px;
 }
-.about-info ul, .about-achievements ul {
+
+.about-info ul,
+.about-achievements ul {
   list-style: disc inside;
   padding-left: 18px;
 }
+
 .about-achievements ul {
   margin-bottom: 14px;
 }
@@ -270,13 +305,16 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 0 auto 18px;
 }
-.contact-form input, .contact-form textarea {
+
+.contact-form input,
+.contact-form textarea {
   border: 1.5px solid #e2e2e2;
   border-radius: 7px;
   padding: 9px 12px;
@@ -284,10 +322,12 @@ body {
   width: 100%;
   resize: vertical;
 }
+
 .contact-form button {
   align-self: center;
   cursor: pointer;
 }
+
 .contact-details p {
   margin: 6px 0;
 }
@@ -303,6 +343,7 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .footer-content {
   display: flex;
   align-items: center;
@@ -310,11 +351,13 @@ body {
   max-width: 760px;
   margin: 0 auto;
 }
+
 .footer a {
   color: #f27825;
   margin-left: 16px;
   font-size: 1.2rem;
 }
+
 .footer a:hover {
   color: #f55;
 }
@@ -330,6 +373,7 @@ body {
     gap: 26px;
   }
 }
+
 @media (max-width: 600px) {
   .hero,
   .about,
@@ -337,6 +381,15 @@ body {
   .contact {
     padding: 15px 3vw;
     margin: 32px auto;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content h2 {
+    font-size: 1.6rem;
+  }
+  .hero-desc {
+    font-size: 0.9rem;
   }
   .hero-content {
     flex-direction: column;
@@ -348,8 +401,11 @@ body {
     gap: 10px;
     align-items: flex-start;
   }
+  .hero-buttons {
+    gap: 12px;
+    flex-direction: column;
+  }
   .navbar {
-    /* Corrected properties for a horizontal navbar on mobile */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -357,24 +413,17 @@ body {
     padding: 0 15px;
   }
   .nav-links {
-    /* Corrected properties for horizontal links */
     flex-direction: row;
-    gap: 1.3rem;
-    width: auto;
-    margin-top: 0;
+    gap: 15px;
   }
   .logo-initials {
-    margin-bottom: 0;
+    font-size: 1.5rem;
   }
   .contact-form {
-    padding: 0 10px; /* Adds padding on the sides */
+    padding: 0 10px;
   }
-
   .contact-form input,
   .contact-form textarea {
-    max-width: 95%; /* Limits the width of the input fields */
+    max-width: 95%;
   }
 }
-
-
-
