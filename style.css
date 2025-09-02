@@ -394,49 +394,57 @@ body {
     flex-direction: row;
     gap: 15px;
   }
-
+  
   /* Other mobile styles */
   .hero,
   .about,
   .projects,
   .contact {
-    padding: 15px 5vw;
+    padding: 15px;
     margin: 32px auto;
-    width: 90vw;
+    width: 90%;
     box-sizing: border-box;
   }
+
+  .hero-content {
+    align-items: flex-start;
+  }
+
   .hero-content h1 {
     font-size: 2.2rem;
   }
+
   .hero-content h2 {
     font-size: 1.6rem;
   }
+
   .hero-desc {
     font-size: 0.9rem;
   }
-  .hero-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-  }
+
   .footer-content {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
   }
+
   .hero-buttons {
     gap: 12px;
     flex-direction: column;
   }
+  
   .logo-initials {
     font-size: 1.5rem;
   }
+  
   .contact-form {
     padding: 0 10px;
   }
+  
   .contact-form input,
   .contact-form textarea {
-    max-width: 95%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
