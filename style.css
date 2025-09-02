@@ -400,9 +400,8 @@ body {
   .about,
   .projects,
   .contact {
-    padding: 15px;
+    padding: 15px 3vw;
     margin: 32px auto;
-    width: 90%;
     box-sizing: border-box;
   }
 
