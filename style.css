@@ -15,6 +15,7 @@ body {
   padding: 0;
   background-color: #000;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 /* PC Navigation (visible on desktop) */
@@ -31,6 +32,10 @@ body {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
+}
+
+.navbar-mobile {
+  display: none;
 }
 
 .logo-initials {
@@ -389,7 +394,7 @@ body {
     flex-direction: row;
     gap: 15px;
   }
-
+  
   /* Other mobile styles */
   .hero,
   .about,
@@ -431,4 +436,10 @@ body {
   .contact-form textarea {
     max-width: 95%;
   }
+}
+
+@media (min-width: 601px) {
+    .navbar-mobile {
+        display: none;
+    }
 }
