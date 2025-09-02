@@ -17,8 +17,8 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Navigation */
-.navbar {
+/* PC Navigation (visible on desktop) */
+.navbar-pc {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -363,18 +363,34 @@ body {
 }
 
 /* Responsive Styles */
-@media (max-width: 900px) {
-  .projects-grid {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .about-inner {
-    flex-direction: column;
-    gap: 26px;
-  }
-}
-
 @media (max-width: 600px) {
+  /* Hide PC navbar on mobile */
+  .navbar-pc {
+    display: none;
+  }
+  
+  /* Mobile Navigation */
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  /* Other mobile styles */
   .hero,
   .about,
   .projects,
@@ -404,17 +420,6 @@ body {
   .hero-buttons {
     gap: 12px;
     flex-direction: column;
-  }
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    padding: 0 15px;
-  }
-  .nav-links {
-    flex-direction: row;
-    gap: 15px;
   }
   .logo-initials {
     font-size: 1.5rem;
