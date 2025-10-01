@@ -7,17 +7,20 @@ document.querySelectorAll('.nav-links a, .btn').forEach(link => {
     }
   });
 });
+
 window.addEventListener('DOMContentLoaded', function() {
   const section = document.getElementById('home');
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
 });
+
 const projects = [
   {
     title: 'Weather Application',
     image: 'images/weather-app.png',
-    description: 'JavaScript, OpenWeatherMap API<br>Dynamic UI showing real-time weather conditions by location.'
+    description: 'JavaScript, OpenWeatherMap API<br>Dynamic UI showing real-time weather conditions by location.',
+    link: 'https://weathersitegsj.netlify.app/'
   },
   {
     title: 'PathWise Career Finder',
@@ -39,8 +42,7 @@ const AUTOSCROLL_INTERVAL = 6500;
 function showCard(index, fast = false) {
   const cardContainer = document.querySelector('.carousel-card');
   const existingCard = cardContainer.querySelector('.project-card');
-if (existingCard && !fast) {
-    // Fix the container height while animating
+  if (existingCard && !fast) {
     cardContainer.style.height = existingCard.offsetHeight + 'px';
 
     existingCard.classList.remove('fade-in');
@@ -59,7 +61,11 @@ function renderProjectCard(index, container) {
   const p = projects[index];
   container.innerHTML = `
     <div class="project-card fade-in">
-      <img src="${p.image}" alt="${p.title}">
+      ${
+        p.link
+          ? `<a href="${p.link}" target="_blank" rel="noopener"><img src="${p.image}" alt="${p.title}"></a>`
+          : `<img src="${p.image}" alt="${p.title}">`
+      }
       <h3>${p.title}</h3>
       <p>${p.description}</p>
     </div>
@@ -99,6 +105,4 @@ function resetAutoScroll() {
 }
 
 showCard(idx, true);
-
 startAutoScroll();
-
