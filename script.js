@@ -8,7 +8,7 @@ document.querySelectorAll('.nav-links a, .btn').forEach(link => {
   });
 });
 window.addEventListener('DOMContentLoaded', function() {
-  const section = document.getElementById('about');
+  const section = document.getElementById('home');
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
   }
@@ -101,3 +101,4 @@ function resetAutoScroll() {
 showCard(idx, true);
 
 startAutoScroll();
+
