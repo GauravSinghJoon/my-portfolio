@@ -7,7 +7,12 @@ document.querySelectorAll('.nav-links a, .btn').forEach(link => {
     }
   });
 });
-
+window.addEventListener('DOMContentLoaded', function() {
+  const section = document.getElementById('about');
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+});
 const projects = [
   {
     title: 'Weather Application',
@@ -94,4 +99,5 @@ function resetAutoScroll() {
 }
 
 showCard(idx, true);
+
 startAutoScroll();
