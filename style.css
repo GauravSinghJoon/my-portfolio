@@ -84,7 +84,7 @@ body {
     align-items: center;
     padding: 80px 5vw 64px;
     border-radius: 20px;
-    margin: 40px auto;
+    margin: 0 auto;
     max-width: 98vw;
     position: relative;
     z-index: 2;
@@ -209,6 +209,7 @@ body {
 .primary-btn:hover {
     background: #fff;
     color: #f27825;
+    transform: translateY(-5px) scale(1.025);
 }
 
 .outline-btn {
@@ -221,6 +222,7 @@ body {
 .outline-btn:hover {
     background: #f27825;
     color: #fff;
+    transform: translateY(-5px) scale(1.025);
 }
 
 /* Projects Section */
@@ -665,4 +667,149 @@ body {
     .navbar-mobile {
         display: none;
     }
+}
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero-content span,
+.hero-desc,
+.hero-buttons {
+  animation: slideUp 1s ease forwards;
+  opacity: 0;
+  animation-play-state: paused;
+}
+
+body.intro-done .hero-content span,
+body.intro-done .hero-desc,
+body.intro-done .hero-buttons {
+  animation-play-state: running;
+}
+
+.hero-content span:nth-child(1) { animation-delay: 0.2s; }
+.hero-content span:nth-child(2) { animation-delay: 0.4s; }
+.hero-content span:nth-child(3) { animation-delay: 0.6s; }
+.hero-desc { animation-delay: 0.8s; }
+.hero-buttons { animation-delay: 1s; }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.project-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.project-card img {
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+.navbar-pc.scrolled,
+.navbar-mobile.scrolled {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.75);
+}
+/* Intro Screen */
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+#intro-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#intro-screen h1 {
+  color: #ffffff;
+  font-family: 'Clash Display', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: introText 0.8s ease forwards, glowPulse 1.6s ease-in-out infinite;
+  text-shadow:
+    0 0 10px rgba(242,120,37,0.6),
+    0 0 20px rgba(242,120,37,0.45),
+    0 0 40px rgba(242,120,37,0.25);
+}
+@keyframes glowPulse {
+  0% {
+    text-shadow:
+      0 0 8px rgba(242,120,37,0.5),
+      0 0 16px rgba(242,120,37,0.35),
+      0 0 30px rgba(242,120,37,0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 14px rgba(242,120,37,0.8),
+      0 0 30px rgba(242,120,37,0.55),
+      0 0 60px rgba(242,120,37,0.35);
+  }
+  100% {
+    text-shadow:
+      0 0 8px rgba(242,120,37,0.5),
+      0 0 16px rgba(242,120,37,0.35),
+      0 0 30px rgba(242,120,37,0.2);
+  }
+}
+
+#intro-screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(242,120,37,0.15),
+    transparent 60%
+  );
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+#intro-screen.hide::after {
+  opacity: 0;
+}
+
+
+@keyframes introText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introFadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
