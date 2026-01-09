@@ -106,3 +106,40 @@ function resetAutoScroll() {
 
 showCard(idx, true);
 startAutoScroll();
+
+const reveals = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+reveals.forEach(r => revealObserver.observe(r));
+
+window.addEventListener('scroll', () => {
+  document
+    .querySelectorAll('.navbar-pc, .navbar-mobile')
+    .forEach(nav => nav.classList.toggle('scrolled', window.scrollY > 50));
+});
+window.addEventListener('load', () => {
+  const intro = document.getElementById('intro-screen');
+
+  // Start fade-out at 1.2s
+  setTimeout(() => {
+    intro.classList.add('hide');
+
+    // Trigger hero animations AFTER intro starts fading
+    document.body.classList.add('intro-done');
+  }, 1200);
+
+  // Remove from DOM after fade-out completes
+  setTimeout(() => {
+    intro.remove();
+  }, 2000);
+});
