@@ -15,40 +15,40 @@
     />
     <link
       rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@200&display=swap"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
   </head>
   <body>
+    <div id="intro-screen">
+      <h1>Hi, There</h1>
+    </div>
     <video autoplay muted loop playsinline id="background-video">
       <source src="videos/background.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-
     <header>
       <nav class="navbar-pc">
         <div class="logo"><span class="logo-initials">GSJ</span></div>
         <div class="nav-links">
-          <a href="#home">HOME</a>
-          <a href="#projects">PROJECTS</a>
-          <a href="#about">ABOUT</a>
-          <a href="#contact">CONNECT</a>
+          <a href="#home">HOME</a> <a href="#projects">PROJECTS</a>
+          <a href="#about">ABOUT</a> <a href="#contact">CONNECT</a>
         </div>
       </nav>
-
       <nav class="navbar-mobile">
         <div class="logo"><span class="logo-initials">GSJ</span></div>
         <div class="nav-links">
-          <a href="#home">HOME</a>
-          <a href="#projects">PROJECTS</a>
-          <a href="#about">ABOUT</a>
-          <a href="#contact">CONNECT</a>
+          <a href="#home">HOME</a> <a href="#projects">PROJECTS</a>
+          <a href="#about">ABOUT</a> <a href="#contact">CONNECT</a>
         </div>
       </nav>
     </header>
-
-    <section id="home" class="hero dark-theme">
+    <section id="home" class="hero dark-theme reveal">
       <div class="hero-content">
         <div>
           <span class="highlight">GAURAV</span>
@@ -73,18 +73,14 @@
         </div>
       </div>
     </section>
-
-    <section id="projects" class="projects-carousel-box">
+    <section id="projects" class="projects-carousel-box reveal">
       <div class="box">
         <h2 class="projects-title">PROJECTS</h2>
-        <div class="carousel-container">
-          <div class="carousel-card"></div>
-        </div>
+        <div class="carousel-container"><div class="carousel-card"></div></div>
         <div class="carousel-dots"></div>
       </div>
     </section>
-
-    <section id="about" class="about dark-theme">
+    <section id="about" class="about dark-theme reveal">
       <div class="about-inner">
         <div class="about-info">
           <h2>About Me</h2>
@@ -149,8 +145,7 @@
         </div>
       </div>
     </section>
-
-    <section id="contact" class="contact light-theme">
+    <section id="contact" class="contact light-theme reveal">
       <h2>Let's Connect</h2>
       <form
         class="contact-form"
@@ -168,10 +163,9 @@
         <button type="submit" class="btn primary-btn">Send Message</button>
       </form>
     </section>
-
     <footer class="footer">
       <div class="footer-content">
-        <span>&copy; 2025 Gaurav Singh Joon</span>
+        <span>&copy; 2026 MADEBYGSJ</span>
         <span>
           <a
             href="https://linkedin.com/in/gauravsinghjoon/"
@@ -186,7 +180,6 @@
         </span>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
